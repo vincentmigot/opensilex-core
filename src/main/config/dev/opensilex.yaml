@@ -1,0 +1,10 @@
+opensilex-core:
+    debug: true
+    host: localhost
+    port: 8080
+    basePath: /opensilex-core/rest
+    initPackages: []
+    servicePackages:
+        - opensilex.core.services
+    
+    
