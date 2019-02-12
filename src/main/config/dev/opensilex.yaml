@@ -5,6 +5,15 @@ opensilex-core:
     basePath: /opensilex-core/rest
     initPackages: []
     servicePackages:
-        - opensilex.core.services
-    
+        - org.opensilex.core.api.sample
+        
+opensilex-core-rdf4j:
+    host: localhost
+    port: 8080
+    repository: repository
+        
+opensilex-core-mongo:
+    host: localhost
+    port: 27017
+    database: database
     

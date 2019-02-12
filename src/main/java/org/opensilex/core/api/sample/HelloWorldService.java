@@ -1,9 +1,11 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-package opensilex.core.services;
+//******************************************************************************
+//                           HelloWorldService.java
+// OpenSILEX
+// Copyright © INRA 2019
+// Creation date: 01 jan. 2019
+// Contact: vincent.migot@inra.fr, anne.tireau@inra.fr, pascal.neveu@inra.fr
+//******************************************************************************
+package org.opensilex.core.api.sample;
 
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiImplicitParam;
@@ -17,13 +19,16 @@ import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 
 /**
- *
- * @author vincent
+ * Sample webservice which just return "Hello World !" on any request
  */
 @Api("/hello")
 @Path("/hello")
 public class HelloWorldService {
 
+    /**
+     * Hello world webservice configured with token
+     * @return "Hello World !"
+     */
     @GET
     @ApiOperation(value = "Say hello !")
     @ApiResponses(value = {
