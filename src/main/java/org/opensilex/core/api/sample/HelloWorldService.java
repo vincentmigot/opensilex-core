@@ -27,6 +27,7 @@ public class HelloWorldService {
 
     /**
      * Hello world webservice configured with token
+     * 
      * @return "Hello World !"
      */
     @GET

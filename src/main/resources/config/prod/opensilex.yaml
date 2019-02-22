@@ -1,19 +1,18 @@
 opensilex-core:
-    debug: true
+    debug: false
+    scheme: http
     host: localhost
     port: 8080
     basePath: /opensilex-core/rest
-    initPackages: []
-    servicePackages:
-        - org.opensilex.core.api.sample
+    defaultLanguage: en
         
 opensilex-core-rdf4j:
     host: localhost
     port: 8080
     repository: repository
-        
+    path: rdf4j-server
+
 opensilex-core-mongo:
     host: localhost
     port: 27017
     database: database
-    

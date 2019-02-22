@@ -32,4 +32,11 @@ public interface RDF4JConfig {
      * @return Repository name
      */
     String repository();
+    
+    /**
+     * RDF4J server path
+     *
+     * @return Server path
+     */
+    String path();
 }

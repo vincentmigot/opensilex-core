@@ -10,7 +10,7 @@ package org.opensilex.core.mongodb;
 import org.opensilex.core.config.MongoDBConfig;
 
 /**
- * Implementation of MongoDBService for production
+ * Implementation of MongoDBService
  */
 public class MongoDBServiceImpl implements MongoDBService {
         

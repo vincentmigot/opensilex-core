@@ -7,19 +7,51 @@
 //******************************************************************************
 package org.opensilex.core;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
- * This interface provide entry point for OpenSILEX Modules
- * It can be implemented in every module by creating a file named
- * META-INF/services/org.opensilex.core.OpenSilexModule
- * which contains the list of implementations in this jar
- * ie: phis2ws.service.Phis2Module
+ * This abstract class provide entry point for OpenSILEX modules inside application
+ * Simply extends this class to create a module.
  */
-public interface OpenSilexModule {
+public abstract class OpenSilexModule {
+
+    protected  Application app = null;
     
     /**
-     * This entry point allow module to initialize anything in application during initialization
-     * @param app Currently initializing application
+     * This setter allow to give a reference to the main application to each module
+     * 
+     * @param app the main application
      */
-    public void init(Application app);
+    final public void setApplication(Application app) {
+        this.app = app;
+    }
+
+    /**
+     * This method is called during application initialization to get all packages
+     * to scan for components like request filters
+     * 
+     * @return List of packages to scan
+     */
+    public List<String> getPackagesToScan() {
+        return new ArrayList<String>();
+    }
+
+    /**
+     * This method is called during application initialization to get all packages
+     * to scan for jersey web services wich will be displayed into swagger UI
+     * 
+     * @return List of packages to scan for web services
+     */
+    public List<String> getServicesPackagesToScan() {
+        return new ArrayList<String>();
+    }
     
+    /**
+     * This entry point allow module to initialize anything in application
+     * after all configuration is loaded at the end of application loading
+     */
+    public void init() {
+        // Do nothing by default; 
+    }
 }

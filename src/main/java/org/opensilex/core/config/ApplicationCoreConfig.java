@@ -7,8 +7,6 @@
 //******************************************************************************
 package org.opensilex.core.config;
 
-import java.util.List;
-
 /**
  * Core configuration interface
  */
@@ -22,6 +20,13 @@ public interface ApplicationCoreConfig {
      */
     Boolean debug();
 
+    /**
+     * Url scheme http or https
+     *
+     * @return Url scheme
+     */
+    String scheme();
+    
     /**
      * Web server host name or IP address
      *
@@ -44,17 +49,10 @@ public interface ApplicationCoreConfig {
     String basePath();
 
     /**
-     * List of packages which are initialized for components scan
-     *
-     * @return List of packages
+     * Default application language
+     * 
+     * @return default application language
      */
-    List<String> initPackages();
-
-    /**
-     * List of packages which are initialized for web services scan
-     *
-     * @return List of packages
-     */
-    List<String> servicePackages();
+    String defaultLanguage();
 
 }
