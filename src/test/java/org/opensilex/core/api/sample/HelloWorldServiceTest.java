@@ -11,17 +11,18 @@ import org.glassfish.jersey.server.ResourceConfig;
 import org.glassfish.jersey.test.JerseyTest;
 import static org.junit.Assert.assertEquals;
 import org.junit.Test;
+import org.opensilex.core.OpensilexTest;
 
 /**
  * Test class for HelloWorldService
  */
-public class HelloWorldServiceTest extends JerseyTest {
+public class HelloWorldServiceTest extends OpensilexTest {
 
     @Override
     protected Application configure() {
-        return new ResourceConfig(HelloWorldService.class);
+        return configure(HelloWorldService.class);
     }
-
+    
     @Test
     public void testHelloWorldResponse() {
         Response response = target("/hello").request().get();
@@ -30,6 +31,6 @@ public class HelloWorldServiceTest extends JerseyTest {
         assertEquals("Http Content-Type should be: ", MediaType.TEXT_PLAIN, response.getHeaderString(HttpHeaders.CONTENT_TYPE));
 
         String content = response.readEntity(String.class);
-        assertEquals("Content of ressponse is: ", "Hello World !", content);
+        assertEquals("Content of response is: ", "Hello World !", content);
     }
 }
