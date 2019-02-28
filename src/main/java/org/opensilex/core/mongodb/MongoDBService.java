@@ -11,5 +11,5 @@ package org.opensilex.core.mongodb;
  * Interface which describe MongoDB service
  */
 public interface MongoDBService {
-    
+    // TODO: Create methods for at least CRUD and transactions for MongoDB
 }

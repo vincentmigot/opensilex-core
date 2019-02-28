@@ -14,7 +14,17 @@ import org.opensilex.core.config.RDF4JConfig;
  */
 public class RDF4JService implements SPARQLService {
     
+    /**
+     * RDF4J connection configuration
+     */
+    private RDF4JConfig config;
+    
+    /**
+     * Constructor for RDF4J service with configuration
+     * 
+     * @param config RDF4J connection configuration
+     */
     public RDF4JService(RDF4JConfig config) {
-        
+        this.config = config;
     }
 }

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration debug="false">
+    <!-- configuration variables-->
+    <property name="logPattern" value="%d{dd MMM yyyy;HH:mm:ss.SSS} [%thread] %-5level %logger{20} - %msg%n" />
+    <property resource="app.properties" />
+    
+    <!-- output -->
+    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>${logPattern}</pattern>
+        </encoder>
+    </appender>
+    
+    <!-- define log level output for specific packages -->
+    <logger name="org.mongodb.driver" level="WARN"/>
+    <logger name="org.apache" level="WARN"/>
+    <logger name="org.apache.tomcat" level="WARN"/>
+    <logger name="org.glassfish.jersey" level="WARN"/>
+    <logger name="io.swagger" level="WARN"/>
+    <logger name="org.reflections" level="WARN"/>
+    <logger name="org.openrdf" level="WARN"/>
+    <logger name="org.cfg4j" level="WARN" />
+    <logger name="ch.qos.logback" level="WARN" />
+    
+    <root level="ALL">
+        <appender-ref ref="STDOUT" />
+    </root>
+</configuration>

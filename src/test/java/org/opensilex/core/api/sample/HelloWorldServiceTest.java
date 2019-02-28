@@ -1,14 +1,17 @@
+//******************************************************************************
+//                             OpensilexTest.java
+// OpenSILEX
+// Copyright © INRA 2019
+// Creation date: 01 jan. 2019
+// Contact: vincent.migot@inra.fr, anne.tireau@inra.fr, pascal.neveu@inra.fr
+//******************************************************************************
+
 package org.opensilex.core.api.sample;
 
-
-import org.opensilex.core.api.sample.HelloWorldService;
-import javax.ws.rs.core.Application;
 import javax.ws.rs.core.HttpHeaders;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 import javax.ws.rs.core.Response.Status;
-import org.glassfish.jersey.server.ResourceConfig;
-import org.glassfish.jersey.test.JerseyTest;
 import static org.junit.Assert.assertEquals;
 import org.junit.Test;
 import org.opensilex.core.OpensilexTest;
@@ -18,11 +21,6 @@ import org.opensilex.core.OpensilexTest;
  */
 public class HelloWorldServiceTest extends OpensilexTest {
 
-    @Override
-    protected Application configure() {
-        return configure(HelloWorldService.class);
-    }
-    
     @Test
     public void testHelloWorldResponse() {
         Response response = target("/hello").request().get();

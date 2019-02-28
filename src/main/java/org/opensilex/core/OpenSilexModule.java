@@ -16,14 +16,14 @@ import java.util.List;
  */
 public abstract class OpenSilexModule {
 
-    protected  Application app = null;
+    protected  OpenSilexResourceConfig app = null;
     
     /**
      * This setter allow to give a reference to the main application to each module
      * 
      * @param app the main application
      */
-    final public void setApplication(Application app) {
+    final public void setApplication(OpenSilexResourceConfig app) {
         this.app = app;
     }
 

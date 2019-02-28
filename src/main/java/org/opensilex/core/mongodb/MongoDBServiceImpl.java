@@ -14,8 +14,18 @@ import org.opensilex.core.config.MongoDBConfig;
  */
 public class MongoDBServiceImpl implements MongoDBService {
         
+    /**
+     * MongoDB connection configuration
+     */
+    private MongoDBConfig config;
+    
+    /**
+     * Constructor for MongoDB service with configuration
+     * 
+     * @param config MongoDB connection configuration
+     */
     public MongoDBServiceImpl(MongoDBConfig config) {
-        
+        this.config = config;
     }
     
     

@@ -12,5 +12,5 @@ package org.opensilex.core.sparql;
  * Interface which describe SPARQL service
  */
 public interface SPARQLService {
-    
+    // TODO: Create methods for at least CRUD 
 }
